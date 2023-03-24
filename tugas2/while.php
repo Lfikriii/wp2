@@ -5,8 +5,8 @@
 </form>
 
 <?php
-$awal = (int)$_POST['awal'];
-$akhir = (int)$_POST['akhir'];
+$awal = (int)$_POST["awal"];
+$akhir = (int)$_POST["akhir"];
 $jumlah = 0;
 
 while ($awal <= $akhir) {
