@@ -5,6 +5,7 @@
 </form>
 
 <?php
+error_reporting(0);
 $awal = (int)$_POST["awal"];
 $akhir = (int)$_POST["akhir"];
 $jumlah = 0;
