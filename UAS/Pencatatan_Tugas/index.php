@@ -38,7 +38,9 @@ include "koneksi.php";
 
     <div class="container">
         <div class="mt-3">
-            <h1 class="text-center">LIST TUGAS INFORMATIKA '21</h1>
+            <h1 class="text-center">
+                <span class="bg-info rounded p-2">LIST TUGAS INFORMATIKA '21</span>
+            </h1>
         </div>
 
         <div class="mt-3">
