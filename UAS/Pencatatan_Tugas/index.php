@@ -53,9 +53,12 @@ include "koneksi.php";
                         Tambah Tugas
                     </button>
                     <!-- <a href="print.php" class="btn btn-warning">print</a> -->
-                    <button type="button" class="btn btn-primary align-items-end" data-bs-toggle="modal" data-bs-target="#popupPrint">
-                        Print
-                    </button>
+
+                    <form method="post" action="export.php">
+                        <button type="submit" class="btn btn-primary">
+                            export ke excel
+                        </button>
+                    </form>
 
 
                     <!-- search -->
