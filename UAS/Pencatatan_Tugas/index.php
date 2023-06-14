@@ -17,10 +17,19 @@ include "koneksi.php";
     <style>
         body {
             background-image: url('gambar.png');
-            /* Ganti path/to/background-image.jpg dengan path yang sesuai ke gambar latar belakang yang ingin Anda gunakan */
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
+        }
+
+        @media print {
+            .print-only {
+                display: block;
+            }
+
+            .no-print {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -32,7 +41,7 @@ include "koneksi.php";
             <h1 class="text-center">LIST TUGAS INFORMATIKA '21</h1>
         </div>
 
-        <div class="mt-3 h-">
+        <div class="mt-3">
             <div class="card">
                 <div class="card-header bg-primary text-white">
                     List Tugas
@@ -44,6 +53,9 @@ include "koneksi.php";
                         Tambah Tugas
                     </button>
                     <!-- <a href="print.php" class="btn btn-warning">print</a> -->
+                    <button type="button" class="btn btn-primary align-items-end" data-bs-toggle="modal" data-bs-target="#popupPrint">
+                        Print
+                    </button>
 
 
                     <!-- search -->
@@ -101,7 +113,7 @@ include "koneksi.php";
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <form method="POST" action="aksi_crud.php">
-                                            <input type="hidden" name="id_mhs" value="<?= $data['id_tugas'] ?>">
+                                            <input type="hidden" name="id_tugas" value="<?= $data['id_tugas'] ?>">
                                             <div class="modal-body">
 
                                                 <!-- NIM -->
@@ -184,7 +196,7 @@ include "koneksi.php";
 
                                         <!-- NIM -->
                                         <div class="mb-3">
-                                            <label class="form-label">NIM</label>
+                                            <label class="form-label">Matkul</label>
                                             <input type="text" class="form-control" name="tmatkul" placeholder="Masukkan nama matkul">
                                         </div>
 
@@ -196,7 +208,7 @@ include "koneksi.php";
 
                                         <!-- alamat -->
                                         <div class="mb-3">
-                                            <label class="form-label">deskripso</label>
+                                            <label class="form-label">deskripsi</label>
                                             <textarea class="form-control" name="tdeskripsi" rows="2"></textarea>
                                         </div>
 
